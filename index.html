@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Personal Website 215033F</title>
+	<style type="text/css">
+			.bgimg
+			{
+				background-image: url("bgimg1.png");
+				background-size: 100%;
+                }
+            /*Scroling button */    
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				font-size: 18px;
+				border: none;
+				outline: none;
+				background-color: #0F1338;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+					}
+
+				#myBtn:hover {
+				background-color: #0D155A;
+				}
+			
+			/* Navigation Bar*/
+			.menu-bar {
+
+				border-radius: 25px;
+				height: fit-content;
+				display: inline-flex;
+				background-color: rgba(0, 0, 0, .3);
+		       -webkit-backdrop-filter: blur(1px);
+	            backdrop-filter: blur(1px);  
+				align-items: center;
+				padding: 0 10px;
+				margin: 30px 0 0 0;
+      		 }
+
+			.menu-li {
+				list-style: none;
+				color: white;
+				font-family: 'Michroma', sans-serif;
+				font-weight: bold;
+				padding: 12px 16px;
+				margin: 0 8px;
+				position: relative;
+				cursor: pointer;
+			 	white-space: nowrap;
+			 	text-decoration: none;
+		           }
+		    .menu-li:hover{
+		    	background-color: black;
+		    	border-radius: 10px;
+		    }
+		    /* Home Section*/
+			.homehead{
+				color: white;
+				font-size:90px;
+				padding-left: 20%;
+				width: auto;
+			}
+			.homeimg{
+				
+				padding-top: 200px;
+				width: 100%;
+				border-radius: 10px;
+			}
+			/*Circles */
+			.dot{
+				height: 25px;
+	  			width: 25px;
+	  			background-color: #bbb;
+	  			border-radius: 50%;
+	  			display: inline-block;
+				}
+			.hdpg{
+				text-align: center;
+				color: white;
+				font-family: 'Michroma', sans-serif;
+				font-weight: bold;
+				font-size: 50px;
+				padding-top: 60px;
+				padding-bottom: 60px;
+			}
+			.abt-section{
+				font-family: 'Michroma', sans-serif;
+				font-size: 25px;
+				color: white;
+				padding-left: 70px;
+				padding-bottom: 100px;
+
+			}
+			.abt-img{
+				max-width: 600px;
+				opacity: 0.7;
+				border-radius: 10px;
+				padding-left: 400px;
+				padding-top: 50px;
+				width: 100%;
+				}
+			/*Contact Form*/
+
+			input[type=text], select, textarea {
+			  width: 300px;
+			  padding: 12px;
+			  border: 1px solid #ccc;
+			  border-radius: 4px;
+			  box-sizing: border-box;
+			  margin-top: 10px;
+			  margin-bottom: 16px;
+			  resize: vertical;
+			  border-color: white;
+			}
+
+			input[type=submit] {
+			  background-color: #0F1338;
+			  color: white;
+			  padding: 12px 20px;
+			  border: none;
+			  border-radius: 4px;
+			  cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+			  background-color: #0D155A ;
+			}
+
+			.container {
+			  border-radius: 5px;
+			  padding: 20px;
+			  color: white;
+			  font-family: 'Michroma', sans-serif;
+			  padding-left: 200px;
+			}
+			/* Social Media Icons */
+			.fa {
+			  padding: 20px;
+			  font-size: 30px;
+			  width: 50px;
+			  text-align: center;
+			  text-decoration: none;
+			  margin: 5px 2px;
+			}
+			.fa:hover {
+			  opacity: 0.7;
+			}
+			.fa-linkedin {
+			  background: #007bb5;
+			  color: white;
+			}
+			.fa-facebook {
+			  background: #3B5998;
+			  color: white;
+			}
+			.fa-yahoo {
+			  background: #430297;
+			  color: white;
+			}
+			.con-int{
+			    font-family: 'Michroma', sans-serif;
+				font-size: 25px;
+				color: white;
+			}
+			.con-section{
+				margin-right: 70px;
+				margin-top: 70px;
+			}
+			/*Footer */
+			footer{
+				background-color: black;
+				color: white;
+				text-decoration: none;
+				font-size: 20px;
+				height: auto;
+				text-align: center;
+				font-weight: bold;
+				
+
+			}
+	</style>
+</head>
+<body class="bgimg">
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+	    function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    mybutton.style.display = "block";
+	  } else {
+	    mybutton.style.display = "none";
+	  }
+		}
+
+	   // When the user clicks on the button, scroll to the top of the document
+	  function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	  }
+	</script>
+	<ul class="menu-bar">
+
+		<li class="menu-li"><a class="menu-li" href="#">Home</a></li>
+		<li class="menu-li"><a class="menu-li" href="#about1">About me</a></li>
+		<li class="menu-li"><a class="menu-li" href="#skills1">Skills</a></li>
+		<li class="menu-li"><a class="menu-li" href="#">Projects</a></li>
+		<li class="menu-li"><a class="menu-li" href="#contact1">Contact</a></li>	
+	</ul>
+	<table>
+		 <tr valign = "top">
+	            <td width = "80%">
+	               
+	               	<p class="homehead">
+	               		Hi,
+	               		<br>
+	               		I'm Janith
+	               		<br>
+	              		University Undergraduate
+	               	</p>
+	               	
+	               
+	            <td width = "80%" height = "200%">
+	            	
+	             	<img class="homeimg" src="img3.png">
+	             	
+	            </td>
+	         </tr>
+	</table>
+
+	<div style="text-align: center;">	
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+		<a id="about1"></a>
+	<div class="hdpg">
+		About me
+	</div>
+	
+	<div class="abt-section">
+		I'm Janith Chathusanka Edirisinghe.<br>
+		First year Undergraduate at University of Moratuwa Facalty Of IT(ITM).
+		<img class="abt-img" src="img4.jpg">
+	</div>
+
+	<div style="text-align: center;">	
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	<a id="skills1"></a>
+	<div class="hdpg">
+		Skills
+	</div>
+	<div class="abt-section">
+		I am a student in University of mortuwa. Also, I still learning  about coding, designing, markup languages and other things that are related to this sector. Also, I never give up and constantly learn new skills and gather more knowledge to be the better version of myself.
+	
+	<center>
+		<img src="img2.png">
+	</center>
+	</div>
+
+	<div style="text-align: center;">	
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	<a id="contact1"></a>
+	<div class="hdpg">
+		Contact
+	</div>
+	<table>
+		 <tr valign = "top">
+	            <td width = "80%">
+	               
+	               	<div class="container">
+					  	<form action="/action_page.php">
+						    <label for="fname">First Name</label><br>
+						    <input type="text" id="fname" name="firstname" placeholder="Name"><br>
+
+						    <label for="Email">Last Name</label><br>
+						    <input type="text" id="email" name="email" placeholder="example@gmail.com"><br>
+
+						    <label for="subject">Subject</label><br>
+						    <input type="text" id="subject" name="subject" placeholder="Subject"><br>
+
+						    
+
+						    <label for="massage">Message</label><br>
+						    <textarea id="massage" name="massage" placeholder="Type Your Message...." style="height:150px"></textarea><br>
+
+						    <input type="submit" value="Send">
+					  	</form>
+					</div>
+	               	
+	            </td>  
+	            <td width = "300px" height = "200%">
+	            	    <div class="con-section">
+		            	<div class="con-int">
+		            		Social Media Links
+		            	</div>		
+		             	<a href="#" class="fa fa-linkedin"></a>
+		             	<a href="#" class="fa fa-facebook"></a>
+		             	<a href="#" class="fa fa-yahoo"></a>
+		            </div>
+	            </td>
+	    </tr>
+	</table>
+	<footer>
+		<br>
+		Created By Janith Edirisinge | 2022
+	</footer>	
+</body>
+</html>
